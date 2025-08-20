@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+<!-- <link rel="stylesheet" href="./reset.css" /> -->
+<link rel="stylesheet" href="./login.css" />
+
+</head>
+<body>
+  <div class="main">
+      <div class="logo">
+        <div class="logo-img">
+        </div>
+        <div>
+          <h1>판다마켓</h1>
+        </div>
+      </div>
+      <div class="login_container">
+        <div class="container-wrap">
+          <form class="container-form">
+
+            <div class="email">
+              <label for="e-mail">  이메일 </label>
+              <input type="email" class="email-input" id="email" placeholder="이메일을 입력하세요" autocomplete="email">
+            </div>
+
+            <div class="password">
+              <label for="password">비밀번호</label>
+              <input 
+                  type="password"
+                  class="password-input"
+                  id="password" 
+                  placeholder="비밀번호를 입력해주세요" 
+                  autocomplete="current-password"
+              /> 
+              <button type="button" class="toggle-password">
+                <img src="./panda_logimg/btn_visibility_on_24px.svg" alt="비밀번호 표시">            
+              </button>
+            </div>
+          </form>
+
+          <button type="submit" class="login-btn">로그인
+            </button>
+        </div>
+
+      <div class="container-login">
+        <div class="loginpage">
+          <h2>간편 로그인하기</h2>
+          <div class="login-icon">
+            <div class="gogle">
+              <a class="icon-gogle" href="https://www.google.com/">
+                <img src="./panda_logimg/Component 2.png"> 
+              </a>
+            </div>
+          <div>
+            <a class="icon-kakao" href="https://www.kakaocorp.com/">
+              <img src="./panda_logimg/Component 3.png">
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sign-text">
+          <p>판다마켓이 처음이신가요?</p>
+          <a href="./signup.html" class="signup">회원가입</a>
+        </div>
+      </div>
+
+  </div>
+</body>
+</html>
