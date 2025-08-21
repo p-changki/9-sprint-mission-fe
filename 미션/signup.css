@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  padding: 60px 640px 178px 640px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagewrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
