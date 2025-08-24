@@ -4,69 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
-    <!-- <link rel="stylesheet" href="./reset.css" /> -->
+    <link rel="stylesheet" href="../미션/reset.css" />
     <link rel="stylesheet" href="./signup.css" />
   </head>
   <body>
-    <div class="pagewrap">
-      <header class="logo">
-        <img src="./signpage_img/판다 얼굴.svg" alt="로고" />
-        <h1 class="log-text">판다마켓</h1>
-      </header>
-      <main>
-        <section class="main-wrap">
-          <div class="main-content">
-            <div class="content-A">
-              <label for="email">이메일</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="이메일을 입력하세요"
-              />
+    <div class="page-wrap">
+      <div class="page">
+        <header class="logo">
+          <img src="./signpage_img/판다 얼굴.svg" alt="로고" />
+          <h1 class="log-text">판다마켓</h1>
+        </header>
+        <div class="main-content">
+          <section class="main-wrap">
+            <div class="main-content">
+              <div class="content-A">
+                <label for="email">이메일</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="이메일을 입력하세요"
+                />
+              </div>
+              <div class="content-B">
+                <label for="nickname">닉네임</label>
+                <input
+                  type="text"
+                  id="nickname"
+                  placeholder="닉네임을 입력하세요"
+                />
+              </div>
+              <div class="content-C">
+                <label for="password">비밀번호</label>
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="비밀번호를 입력하세요"
+                  />
+                </div>
+              </div>
+
+              <div class="content-D">
+                <label for="password-confirm">비밀번호 확인</label>
+                <div class="input-wrapper">
+                  <input
+                    type="password"
+                    id="password-confirm"
+                    placeholder="비밀번호를 다시 입력하세요"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="content-B">
-              <label for="nickname">닉네임</label>
-              <input
-                type="text"
-                id="nickname"
-                placeholder="닉네임을 입력하세요"
-              />
+            <button class="signup-blt">
+              <p>회원가입</p>
+            </button>
+          </section>
+          <section class="loginbtn">
+            <div class="btn-content">
+              <p>간편 로그인하기</p>
+              <div class="icon">
+                <img src="./signpage_img/Component 2.png" alt="gogle" />
+                <img src="./signpage_img/Component 3.png" alt="kakao" />
+              </div>
             </div>
-            <div class="content-C">
-              <label for="password">비밀번호</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="비밀번호를 입력하세요"
-              />
-            </div>
-            <div class="content-D">
-              <label for="password-confirm">비밀번호 확인</label>
-              <input
-                type="password"
-                id="password-confirm"
-                placeholder="비밀번호를 다시 입력하세요"
-              />
-            </div>
+          </section>
+          <div class="footer-text">
+            <p>이미 회원이신가요?</p>
+            <a href="./login.html">로그인</a>
           </div>
-          <button class="signup-blt">
-            <p>회원가입</p>
-          </button>
-        </section>
-        <section class="loginbtn">
-          <div class="btn-content">
-            <p>간편 로그인하기</p>
-            <div class="icon">
-              <img src="./signpage_img/Component 2.png" alt="gogle" />
-              <img src="./signpage_img/Component 3.png" alt="kakao" />
-            </div>
-          </div>
-        </section>
-        <footer class="footer-text">
-          <p>이미 회원이신가요?</p>
-          <a href="./login.html">로그인</a>
-        </footer>
-      </main>
+        </div>
+      </div>
     </div>
   </body>
 </html>
