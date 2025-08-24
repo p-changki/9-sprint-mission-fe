@@ -2,11 +2,32 @@
   box-sizing: border-box;
 }
 
-body {
-  padding: 60px 0;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+:root {
+  --gray-100: #f3f4f6;
+  --gray-800: #1f2937;
+  --blue-400: #9ca3af;
 }
 
-.pagewrap {
+.page-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 60px 0 178px 0;
+  justify-content: center;
+  align-items: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +45,12 @@ body {
   height: 104px;
   flex-shrink: 0;
 }
-
+.input-wrapper input {
+  background-image: url("./signpage_img/btn_visibility_on_24px.svg");
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+}
 .logo h1 {
   color: var(--brand-blue, #3692ff);
   font-family: "ROKAF Sans";
@@ -32,13 +58,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-}
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
 }
 
 .main-wrap {
@@ -51,28 +70,32 @@ main {
 .main-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+
   gap: 24px;
 }
-
-.content-A {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+.main-content input {
+  width: 640px;
+  height: 56px;
+  padding: 16px 24px;
+  gap: 10px;
+  border-radius: 12px;
+  background: var(--Cool-Gray-100, #f3f4f6);
+  border: none;
+  outline: none;
+  display: block;
 }
-.content-B {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+.main-content input::placeholder {
+  color: var(--Secondary-400, #9ca3af);
+  /* pretendard/lg-16px-regular */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
 }
-.content-C {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-}
+.content-A,
+.content-B,
+.content-C,
 .content-D {
   display: flex;
   flex-direction: column;
@@ -80,7 +103,7 @@ main {
   gap: 16px;
 }
 
-.content-A label {
+.main-content label {
   color: var(--Cool-Gray-800, #1f2937);
   font-family: Pretendard;
   font-size: 18px;
@@ -88,111 +111,20 @@ main {
   font-weight: 700;
   line-height: normal;
 }
-.content-A #email {
+.inpit-wrapper {
   display: flex;
-  width: 640px;
-  height: 56px;
-  padding: 16px 24px;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  border-radius: 12px;
-  background: var(--Cool-Gray-100, #f3f4f6);
-  border: none;
-  outline: none;
+  align-self: stretch;
 }
-
-.content-A::placeholder {
-  color: var(--Secondary-400, #9ca3af);
-
-  /* pretendard/lg-16px-regular */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-}
-
-.content-B label {
-  color: var(--Cool-Gray-800, #1f2937);
-  font-family: Pretendard;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.content-B #nickname {
+.visibility-icon {
   display: flex;
-  width: 640px;
-  height: 56px;
-  padding: 16px 24px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 12px;
-  background: var(--Cool-Gray-100, #f3f4f6);
-  border: none;
-  outline: none;
-}
-
-.content-b::placeholder {
-  color: var(--Secondary-400, #9ca3af);
-  /* pretendard/lg-16px-regular */
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-}
-
-.content-C label {
-  color: var(--Cool-Gray-800, #1f2937);
-  font-family: Pretendard;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.content-C #password {
-  display: flex;
-  width: 640px;
-  height: 56px;
-  padding: 16px 24px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 12px;
-  background: var(--Cool-Gray-100, #f3f4f6);
-  border-radius: 12px;
-  background: var(--Cool-Gray-100, #f3f4f6);
-  border: none;
-  outline: none;
-}
-
-.content-C::placeholder {
-  border-radius: 12px;
-  background: var(--Cool-Gray-100, #f3f4f6);
-}
-
-.content-D label {
-  color: var(--Cool-Gray-800, #1f2937);
-  font-family: Pretendard;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.content-D #password-confirm {
-  display: flex;
-  width: 640px;
-  height: 56px;
-  padding: 16px 24px;
-  flex-direction: column;
+  width: 24px;
+  height: 24px;
   justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  border-radius: 12px;
-  background: var(--Cool-Gray-100, #f3f4f6);
-  border: none;
-  outline: none;
+  align-items: center;
 }
+
 .signup-blt {
   display: flex;
   padding: 16px 124px;
@@ -202,7 +134,24 @@ main {
   align-self: stretch;
   border-radius: 40px;
   background: var(--Cool-Gray-400, #9ca3af);
+  outline: none;
+  border: none;
 }
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.visibility-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
 .signup-blt p {
   color: #fff;
   text-align: center;
@@ -210,7 +159,7 @@ main {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
 }
 
 .loginbtn {
