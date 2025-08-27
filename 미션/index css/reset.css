@@ -1,8 +1,3 @@
-* {
-  box-sizing: border-box;
-  font-family: inherit;
-}
-
 html,
 body,
 div,
@@ -90,9 +85,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  text-decoration: none;
 }
-
+/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -106,21 +100,17 @@ nav,
 section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -128,17 +118,7 @@ q:after {
   content: "";
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
-
-input {
-  border: none;
 }
