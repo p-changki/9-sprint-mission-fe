@@ -17,9 +17,6 @@ html {
   position: absolute;
   right: 24px;
 }
-.password {
-  display: block;
-}
 
 .page-wrap {
   display: flex;
@@ -55,11 +52,12 @@ html {
 .logo h1 {
   color: var(--brand-blue, #3692ff);
   font-family: "ROKAF Sans";
-  font-size: 66.344px;
+  font-size: 4.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
+
 button {
   background: none;
   border: none;
@@ -95,10 +93,10 @@ button {
   color: var(--Secondary-400, #9ca3af);
   /* pretendard/lg-16px-regular */
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 162.5% */
+  line-height: 1.625rem; /* 162.5% */
 }
 .content-A,
 .content-B,
@@ -117,7 +115,7 @@ button {
 .main-content label {
   color: var(--Cool-Gray-800, #1f2937);
   font-family: Pretendard;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -167,10 +165,10 @@ button {
   color: #fff;
   text-align: center;
   font-family: Pretendard;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .loginbtn {
@@ -190,10 +188,10 @@ button {
 
   /* pretendard/lg-16px-medium */
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 26px; /* 162.5% */
+  line-height: 1.625rem; /* 162.5% */
 }
 
 .btn-content {
@@ -221,16 +219,16 @@ button {
 
   /* pretendard/md-14px-medium */
   font-family: Pretendard;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 1.5rem; /* 171.429% */
 }
 
 .footer-text a {
   color: var(--Brand-blue, #3182f6);
   font-family: Pretendard;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
