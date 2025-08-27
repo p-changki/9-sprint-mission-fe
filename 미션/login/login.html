@@ -4,79 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login page</title>
-    <link rel="stylesheet" href="../미션/reset.css" />
+    <link rel="stylesheet" href="../index css/reset.css" />
     <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="./login_box.css" />
   </head>
   <body>
-    <div class="main">
-      <div class="logo">
-        <div class="logo-img"></div>
-        <div>
-          <a href="../미션/index.html">판다마켓</a>
-        </div>
-      </div>
-      <div class="login_container">
-        <div class="container-wrap">
-          <form class="container-form">
-            <div class="email">
-              <label for="email"> 이메일 </label>
-              <input
-                type="email"
-                class="email-input"
-                id="email"
-                placeholder="이메일을 입력하세요"
-                autocomplete="email"
-              />
-            </div>
-            <div class="password">
-              <label for="password">비밀번호</label>
-              <div class="password-box">
-                <input
-                  type="password"
-                  class="password-input"
-                  id="password"
-                  placeholder="비밀번호를 입력해주세요"
-                  autocomplete="current-password"
-                />
-                <button
-                  type="button"
-                  class="toggle-password"
-                  aria-label="비밀번호"
-                >
-                  <img
-                    src="./panda_logimg/btn_visibility_on_24px.svg"
-                    alt="비밀번호 표시"
-                  />
-                </button>
-              </div>
-            </div>
-          </form>
-          <button type="submit" class="login-btn">
-            <a href="./signup.html">로그인</a>
-          </button>
-        </div>
-
-        <div class="container-login">
-          <div class="loginpage">
-            <h2>간편 로그인하기</h2>
-            <div class="login-icon">
-              <div class="gogle">
-                <a class="icon-gogle" href="https://www.google.com/">
-                  <img src="./panda_logimg/Component 2.png" />
-                </a>
-              </div>
-              <div>
-                <a class="icon-kakao" href="https://www.kakaocorp.com/">
-                  <img src="./panda_logimg/Component 3.png" />
-                </a>
-              </div>
-            </div>
+    <div class="page">
+      <div class="main">
+        <div class="logo">
+          <div class="logo-img">
+            <img src="./panda_logimg/panda.svg" />
+          </div>
+          <div>
+            <a href="../index.html">판다마켓</a>
           </div>
         </div>
 
-        <div class="sign-text">
-          <p>판다마켓이 처음이신가요?</p>
-          <a href="./signup.html" class="signup">회원가입</a>
+        <div class="login_container">
+          <div class="container-wrap">
+            <form class="container-form">
+              <div class="email">
+                <label for="email"> 이메일 </label>
+                <input
+                  type="email"
+                  class="email-input"
+                  id="email"
+                  placeholder="이메일을 입력하세요"
+                  autocomplete="email"
+                />
+              </div>
+              <div class="password">
+                <label for="password">비밀번호</label>
+                <div class="password-box">
+                  <input
+                    type="password"
+                    class="password-input"
+                    id="password"
+                    placeholder="비밀번호를 입력해주세요"
+                    autocomplete="current-password"
+                  />
+                  <button
+                    type="button"
+                    class="toggle-password"
+                    aria-label="비밀번호"
+                  >
+                    <img
+                      src="./panda_logimg/btn_visibility_off_24px.svg"
+                      alt="비밀번호 표시"
+                    />
+                  </button>
+                </div>
+              </div>
+            </form>
+            <button type="submit" class="login-btn">
+              <a href="../signup/signup.html">로그인</a>
+            </button>
+          </div>
+
+          <div class="container-login">
+            <div class="loginpage">
+              <h2>간편 로그인하기</h2>
+              <div class="login-icon">
+                <div class="gogle">
+                  <a class="icon-gogle" href="https://www.google.com/">
+                    <img src="./panda_logimg/Component 2.png" />
+                  </a>
+                </div>
+                <div>
+                  <a class="icon-kakao" href="https://www.kakaocorp.com/">
+                    <img src="./panda_logimg/Component 3.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sign-text">
+            <p>판다마켓이 처음이신가요?</p>
+            <a href="../signup/signup.html" class="signup">회원가입</a>
+          </div>
         </div>
       </div>
     </div>
