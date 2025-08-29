@@ -22,7 +22,7 @@ input:focus {
 .page {
   display: flex;
   width: 100%;
-  padding: 231px 0;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -108,6 +108,7 @@ input:focus {
   position: relative;
   width: 640px; /* input이랑 버튼 같이 폭 맞추기 */
 }
+
 .toggle-password {
   position: absolute;
   right: 24px;
@@ -154,7 +155,6 @@ input:focus {
   width: 640px;
   padding: 16px 23px;
   flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
   border-radius: 8px;
   background: #e6f2ff;
@@ -175,10 +175,18 @@ input:focus {
   gap: 16px;
 }
 
-.loginpage .login-icon .icon-gogle,
+.loginpage .login-icon .icon-google,
 .loginpage .login-icon .icon-kakao {
   width: 42px;
   height: 42px;
+}
+
+/* logo link groups image + text */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  text-decoration: none;
 }
 
 .sign-text {

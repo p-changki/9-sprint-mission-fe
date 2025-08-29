@@ -50,14 +50,13 @@
 .login-btn a {
   color: var(--Cool-Gray-100, #f3f4f6);
   text-align: center;
-
+  text-decoration: none;
   /* pretendard/xl-20px-semibold */
   font-family: Pretendard;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 2rem; /* 160% */
-  text-decoration: none;
 }
 .container-form label {
   color: var(--Secondary-800, #1f2937);
