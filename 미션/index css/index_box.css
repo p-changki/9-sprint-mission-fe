@@ -1,5 +1,29 @@
-html {
-  font-size: 100%;
+:root {
+  /* Brand */
+  --Primary-100: #3692ff;
+  --Primary-Primary-brand: #3692ff;
+  --brand-blue: #3692ff;
+
+  /* Secondary scale */
+  --Secondary-900: #111827;
+  --Secondary-700: #374151;
+  --Secondary-400: #9ca3af;
+  --Secondary-200: #e5e7eb;
+  --Secondary-50: #f9fafb;
+
+  /* Neutral/Gray */
+  --Cool-Gray-100: #f3f4f6;
+  --Line-Default: #dfdfdf;
+
+  /* Backgrounds */
+  --BG-Sky: #cfe5ff;
+  --BG-White: #ffffff;
+  --Surface: #fcfcfc;
+}
+
+/* Global link text style (typography only) */
+a {
+  text-decoration: none;
 }
 
 .panda {
@@ -10,6 +34,7 @@ html {
   font-weight: 700;
   line-height: normal;
 }
+
 .blt-login span {
   color: var(--Cool-Gray-100, #f3f4f6);
   /* pretendard/lg-16px-semibold */
@@ -20,7 +45,8 @@ html {
   line-height: 1.625rem; /* 162.5% */
   flex-shrink: 0;
 }
-.description p {
+
+.description h1 {
   color: var(--Secondary-700, #374151);
   font-family: Pretendard;
   font-size: 2.5rem;
@@ -39,19 +65,10 @@ html {
   font-weight: 600;
   line-height: 2rem; /* 160% */
 }
-.hot-item .item-A {
-  color: var(--Primary-100, #3692ff);
 
-  /* pretendard/2lg-18px-bold */
-  font-family: Pretendard;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.625rem; /* 144.444% */
-  margin: 0;
-}
-
-.hot-item .item-B {
+.search h2,
+.hot-item h2,
+.register-text h2 {
   color: var(--Secondary-700, #374151);
   font-family: Pretendard;
   font-size: 2.5rem;
@@ -59,12 +76,12 @@ html {
   font-weight: 700;
   line-height: 140%; /* 56px */
   letter-spacing: 0.05rem;
-  margin: 0;
 }
-.hot-item .item-C {
-  color: var(--Secondary-700, #374151);
 
-  /* pretendard/2xl-24px-medium */
+.hot-item p,
+.register p,
+.search p {
+  color: var(--Secondary-700, #374151);
   font-family: Pretendard;
   font-size: 1.5rem;
   font-style: normal;
@@ -72,7 +89,24 @@ html {
   line-height: 2rem; /* 133.333% */
 }
 
-.search-textA .search-textB {
+.search p,
+.search h2 {
+  text-align: right;
+}
+
+.hot-item h3,
+.search-text h3,
+.register-text h3 {
+  color: var(--Primary-100, #3692ff);
+  /* pretendard/2lg-18px-bold */
+  font-family: Pretendard;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem; /* 144.444% */
+}
+
+.illustration-text h2 {
   color: var(--Secondary-700, #374151);
   text-align: right;
   font-family: Pretendard;
@@ -81,72 +115,18 @@ html {
   font-weight: 700;
   line-height: 140%; /* 56px */
   letter-spacing: 0.05rem;
-  margin: 0;
-}
-.search-textA .search-textC {
-  color: var(--Secondary-700, #374151);
-  text-align: right;
-  /* pretendard/2xl-24px-medium */
-  font-family: Pretendard;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 2rem; /* 133.333% */
-  margin: 0;
 }
 
-.search-text p {
-  color: var(--Primary-100, #3692ff);
-  /* pretendard/2lg-18px-bold */
-  font-family: Pretendard;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.625rem; /* 144.444% */
-  margin: 0;
-}
-
-.register-text p {
-  color: var(--Primary-Primary-brand, #3692ff);
-
-  /* pretendard/2lg-18px-bold */
-  font-family: Pretendard;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.625rem; /* 144.444% */
-}
-.register-textA .register-textB {
+.illustration-text h2 {
   color: var(--Secondary-700, #374151);
   font-family: Pretendard;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 140%; /* 56px */
-  letter-spacing: 0.05rem;
-  margin: 0;
 }
-.register-textA .register-textC {
-  color: var(--Secondary-700, #374151);
 
-  /* pretendard/2xl-24px-medium */
-  font-family: Pretendard;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 2rem; /* 133.333% */
-  margin: 0;
-}
-.illustration-text p {
-  color: var(--Secondary-700, #374151);
-  font-family: Pretendard;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 56px */
-  margin: 0;
-}
-.center-text1 p {
+.center-wrapper p {
   color: var(--Secondary-400, #9ca3af);
   text-align: center;
   font-family: Pretendard;
@@ -155,7 +135,8 @@ html {
   font-weight: 400;
   line-height: normal;
 }
-.center-text2 a {
+
+.center-wrap a {
   color: var(--Secondary-200, #e5e7eb);
   text-align: center;
   font-family: Pretendard;
@@ -163,5 +144,4 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-decoration: none;
 }
