@@ -47,7 +47,7 @@
   line-height: 1.625rem; /* 144.444% */
 }
 
-.login-btn a {
+.login-btn {
   color: var(--Cool-Gray-100, #f3f4f6);
   text-align: center;
   text-decoration: none;
@@ -100,4 +100,23 @@
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+
+/* 빨간 에러 문구 */
+.error {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+}
+
+/* invalid 클래스가 붙으면 빨간 테두리 */
+.invalid {
+  border: 1px solid #e53935 !important;
+}
+
+/* 버튼 비활성화 스타일(선택) */
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
