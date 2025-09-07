@@ -15,8 +15,19 @@ export function getEmailError(value) {
   return "";
 }
 
-//PW err validation
+//nickname err validation
+export function getNicknameError(value) {
+  const trimmed = value.trim();
 
+  if (!trimmed) {
+    return "닉네임을 입력해주세요.";
+  } else if (trimmed.length < 2 || trimmed.length > 10) {
+    return "닉네임은 2~10자여야 합니다.";
+  }
+  return "";
+}
+
+//PW err validation
 export function getPwError(value) {
   const trimmed = value.trim();
 
@@ -32,10 +43,33 @@ export function getPwError(value) {
   return "";
 }
 
+//PasswordConfirm err validation
+export function getPasswordConfirmError(password, passwordConfirm) {
+  const pw = (password ?? "").trim();
+  const pc = (passwordConfirm ?? "").trim();
+
+  if (!pc) {
+    return "비밀번호 확인을 입력해주세요.";
+  }
+  if (pw !== pc) {
+    return "비밀번호가 일치하지 않습니다.";
+  }
+  return "";
+}
+
 //email err msg
 export function showEmailError(eMsg, { emailInputElement, emailErrorElement }) {
   emailErrorElement.textContent = eMsg;
   emailInputElement.classList.toggle("error-border", !!eMsg);
+}
+
+//nickname err msg
+export function showNicknameError(
+  msg,
+  { nicknameInputElement, nicknameErrorElement }
+) {
+  nicknameErrorElement.textContent = msg;
+  nicknameInputElement.classList.toggle("error-border", !!msg);
 }
 
 //Pw err msg
@@ -45,4 +79,13 @@ export function showPasswordError(
 ) {
   passwordErrorElement.textContent = eMsg;
   passwordInputElement.classList.toggle("error-border", !!eMsg);
+}
+
+//PasswordConfirm err msg
+export function showPasswordConfirmError(
+  msg,
+  { passwordConfirmInputElement, passwordConfirmErrorElement }
+) {
+  passwordConfirmErrorElement.textContent = msg;
+  passwordConfirmInputElement.classList.toggle("error-border", !!msg);
 }
