@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
-    <link rel="stylesheet" href="../index css/reset.css" />
+    <link rel="stylesheet" href="../index_css/reset.css" />
     <link rel="stylesheet" href="./signup.css" />
+    <link rel="stylesheet" href="./signup_box.css" />
   </head>
   <body>
     <div class="page-wrap">
@@ -15,23 +16,27 @@
           <h1 class="log-text">판다마켓</h1>
         </header>
         <div class="main-content">
-          <section class="main-wrap">
+          <form class="signup-form">
             <div class="main-content">
               <div class="content-A">
                 <label for="email">이메일</label>
                 <input
                   type="email"
                   id="email"
+                  class="email-input"
                   placeholder="이메일을 입력하세요"
                 />
+                <small id="email-error" class="error-message"></small>
               </div>
               <div class="content-B">
                 <label for="nickname">닉네임</label>
                 <input
                   type="text"
                   id="nickname"
+                  class="nickname-input"
                   placeholder="닉네임을 입력하세요"
                 />
+                <small id="nickname-error" class="error-message"></small>
               </div>
               <div class="content-C">
                 <label for="password">비밀번호</label>
@@ -39,6 +44,7 @@
                   <input
                     type="password"
                     id="password"
+                    class="password-input"
                     placeholder="비밀번호를 입력하세요"
                   />
                   <button
@@ -47,11 +53,12 @@
                     aria-label="비밀번호 보기"
                   >
                     <img
-                      src="./panda_logimg/btn_visibility_on_24px.svg"
+                      src="../assets/btn_visibility_off_24px.svg"
                       alt="비밀번호 숨김 상태 아이콘"
                     />
                   </button>
                 </div>
+                <small id="password-error" class="error-message"></small>
               </div>
 
               <div class="content-D">
@@ -61,6 +68,7 @@
                     type="password"
                     id="password-confirm"
                     placeholder="비밀번호를 다시 입력하세요"
+                    class="password-confirm-input"
                   />
                   <button
                     type="button"
@@ -68,17 +76,21 @@
                     aria-label="비밀번호 보기"
                   >
                     <img
-                      src="./panda_logimg/btn_visibility_on_24px.svg"
+                      src="../assets/btn_visibility_off_24px.svg"
                       alt="비밀번호 숨김 상태 아이콘"
                     />
                   </button>
                 </div>
+                <small
+                  id="password-confirm-error"
+                  class="error-message"
+                ></small>
               </div>
             </div>
-            <button class="signup-blt">
+            <button type="submit" class="signup-blt">
               <p>회원가입</p>
             </button>
-          </section>
+          </form>
           <section class="loginbtn">
             <div class="btn-content">
               <p>간편 로그인하기</p>
@@ -99,5 +111,18 @@
         </div>
       </div>
     </div>
+    <div class="modal-backdrop" data-modal-backdrop hidden>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="error-modal-title"
+      >
+        <h2 id="error-modal-title">중복된 로그인입니다.</h2>
+        <button type="button" data-modal-close>확인</button>
+      </div>
+    </div>
+    <script type="module" src="./js/signup.js"></script>
   </body>
 </html>
+../

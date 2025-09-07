@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login page</title>
-    <link rel="stylesheet" href="../index css/reset.css" />
+    <link rel="stylesheet" href="../index_css/reset.css" />
     <link rel="stylesheet" href="./login.css" />
     <link rel="stylesheet" href="./login_box.css" />
   </head>
@@ -19,7 +19,6 @@
             <a href="../index.html">판다마켓</a>
           </div>
         </div>
-
         <div class="login_container">
           <div class="container-wrap">
             <form class="container-form">
@@ -32,6 +31,7 @@
                   placeholder="이메일을 입력하세요"
                   autocomplete="email"
                 />
+                <small id="email-error" class="error"></small>
               </div>
               <div class="password">
                 <label for="password">비밀번호</label>
@@ -50,15 +50,15 @@
                   >
                     <img
                       src="./panda_logimg/btn_visibility_off_24px.svg"
+                      class="toggle-password-icon"
                       alt="비밀번호 표시"
                     />
                   </button>
                 </div>
+                <small id="password-error" class="error"></small>
               </div>
+              <button type="submit" class="login-btn">로그인</button>
             </form>
-            <button type="submit" class="login-btn">
-              <a href="../signup/signup.html">로그인</a>
-            </button>
           </div>
 
           <div class="container-login">
@@ -86,5 +86,17 @@
         </div>
       </div>
     </div>
+    <div class="modal-backdrop" data-modal-backdrop hidden>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="error-modal-title"
+      >
+        <h2 id="error-modal-title">로그인 오류</h2>
+        <button type="button" data-modal-close>확인</button>
+      </div>
+    </div>
+    <script type="module" src="./js/login_main.js"></script>
   </body>
 </html>
