@@ -27,7 +27,7 @@ const confirmToggleBtn = document.querySelector(
 );
 const confirmToggleIcon = confirmToggleBtn?.querySelector("img");
 
-// [Codex] 폼 및 각 입력/에러 표시 노드 참조
+//  폼 및 각 입력/에러 표시 노드 참조
 const form = document.querySelector(".signup-form");
 const emailInput = document.querySelector("#email");
 const nicknameInput = document.querySelector("#nickname");
@@ -37,9 +37,9 @@ const nicknameError = document.querySelector("#nickname-error");
 const passwordError = document.querySelector("#password-error");
 const passwordConfirmError = document.querySelector("#password-confirm-error");
 
-const signupBtn = document.querySelector(".signup-blt"); // [Codex] 제출 버튼 (클래스 변경 시 주의)
+const signupBtn = document.querySelector(".signup-blt");
 
-// [Codex] 비밀번호 토글 초기화 (비밀번호)
+//  비밀번호 토글 초기화 (비밀번호)
 initPasswordToggle({
   pwdInput: passwordInput,
   toggleBtn: pwdToggleBtn,
@@ -48,7 +48,7 @@ initPasswordToggle({
   offIcon: "../signup/panda_logimg/btn_visibility_on_24px.svg",
 });
 
-// [Codex] 비밀번호 토글 초기화 (비밀번호 확인)
+// 비밀번호 토글 초기화 (비밀번호 확인)
 initPasswordToggle({
   pwdInput: passwordConfirmInput,
   toggleBtn: confirmToggleBtn,
@@ -57,7 +57,7 @@ initPasswordToggle({
   offIcon: "../signup/panda_logimg/btn_visibility_on_24px.svg",
 });
 
-// [Codex] 버튼 활성화 조건 갱신: 에러 없음 && 값 모두 존재
+// 버튼 활성화 조건 갱신: 에러 없음 && 값 모두 존재
 function updateSignUpButtonState() {
   const e = getEmailError(emailInput.value);
   const n = getNicknameError(nicknameInput.value);
@@ -75,11 +75,11 @@ function updateSignUpButtonState() {
     passwordConfirmInput.value
   );
 
-  signupBtn.disabled = hasError || !hasValues; // [Codex] 하나라도 에러/미입력 시 비활성화
+  signupBtn.disabled = hasError || !hasValues; //  하나라도 에러/미입력 시 비활성화
 }
-updateSignUpButtonState(); // [Codex] 로드 시 초기 비활성화 상태 보장
+updateSignUpButtonState(); //  로드 시 초기 비활성화 상태 보장
 
-// [Codex] blur 시 각 필드 유효성 검사 및 에러 메시지/스타일 반영
+//  blur 시 각 필드 유효성 검사 및 에러 메시지/스타일 반영
 emailInput.addEventListener("blur", () => {
   const msg = getEmailError(emailInput.value);
   showEmailError(msg, {
@@ -119,15 +119,15 @@ passwordConfirmInput.addEventListener("blur", () => {
   updateSignUpButtonState();
 });
 
-// [Codex] 입력 중에도 실시간으로 버튼 활성화 조건 갱신
+//  입력 중에도 실시간으로 버튼 활성화 조건 갱신
 [emailInput, nicknameInput, passwordInput, passwordConfirmInput].forEach((el) =>
   el.addEventListener("input", updateSignUpButtonState)
 );
 
-// [Codex] 기존 더미 사용자 목록 (중복 이메일 체크용)
+//  기존 더미 사용자 목록 (중복 이메일 체크용)
 import { USER_DATA } from "../../login/js/auth.js";
 
-// [Codex] 제출 시 최종 검증 → 중복 체크 → 성공 시 이동
+//  제출 시 최종 검증 → 중복 체크 → 성공 시 이동
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -157,15 +157,19 @@ form.addEventListener("submit", (e) => {
     passwordConfirmErrorElement: passwordConfirmError,
   });
 
-  if (eMsg || nMsg || pMsg || pcMsg) return; // [Codex] 유효성 에러가 있으면 제출 중단
+  if (eMsg || nMsg || pMsg || pcMsg) return;
 
   // 이메일 중복 체크
   const exists = USER_DATA.some((u) => u.email === emailInput.value.trim());
   if (exists) {
-    openErrorModal("사용 중인 이메일입니다."); // [Codex] 모달로 오류 안내
+    openErrorModal("사용 중인 이메일입니다.");
     return;
   }
 
-  alert("가입이 완료되었습니다."); // [Codex] 성공 안내
-  location.href = "../../미션/login/login.html"; // [Codex] 로그인 페이지로 이동
+  openErrorModal("가입이 완료되었습니다."); //1초뒤 모달 -> 로그인페이지연결
+
+  setTimeout(() => {
+    location.href = "../../미션/login/login.html";
+  }, 1000);
+  return;
 });
