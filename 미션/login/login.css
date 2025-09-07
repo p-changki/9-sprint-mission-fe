@@ -195,3 +195,50 @@ input:focus {
   align-items: center;
   gap: 4px;
 }
+
+/* 버튼 비활성화 스타일(선택) */
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal-backdrop {
+  position: fixed; /* 화면 전체 덮기 */
+  inset: 0; /* top/right/bottom/left: 0; 동일 */
+  display: flex; /* 기본은 보이도록 */
+  align-items: center; /* 수직 중앙 */
+  justify-content: center; /* 수평 중앙 */
+  background: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+  z-index: 9999; /* 다른 요소 위로 */
+}
+
+.modal-backdrop[hidden] {
+  display: none;
+}
+
+.modal {
+  width: 540px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  position: relative; /* 내부 버튼 절대 위치 기준 */
+  padding: 24px; /* 내용 여백 */
+}
+
+.modal button {
+  display: flex;
+  width: 120px;
+  height: 48px;
+  padding: 12px 23px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  background: var(--brand-blue, #3692ff);
+  position: absolute; /* 모달 하단 오른쪽 배치 */
+  right: 24px;
+  bottom: 24px;
+}

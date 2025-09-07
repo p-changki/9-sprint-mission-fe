@@ -19,7 +19,6 @@
             <a href="../index.html">판다마켓</a>
           </div>
         </div>
-
         <div class="login_container">
           <div class="container-wrap">
             <form class="container-form">
@@ -51,14 +50,15 @@
                   >
                     <img
                       src="./panda_logimg/btn_visibility_off_24px.svg"
+                      class="toggle-password-icon"
                       alt="비밀번호 표시"
                     />
                   </button>
                 </div>
                 <small id="password-error" class="error"></small>
               </div>
+              <button type="submit" class="login-btn">로그인</button>
             </form>
-            <button type="button" class="login-btn" disabled>로그인</button>
           </div>
 
           <div class="container-login">
@@ -86,8 +86,17 @@
         </div>
       </div>
     </div>
-    <script src="./js/Validation.js"></script>
-    <script src="./js/password-toggle.js"></script>
-    <script src="./js/USER_DATA.js"></script>
+    <div class="modal-backdrop" data-modal-backdrop hidden>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="error-modal-title"
+      >
+        <h2 id="error-modal-title">로그인 오류</h2>
+        <button type="button" data-modal-close>확인</button>
+      </div>
+    </div>
+    <script type="module" src="./js/login_main.js"></script>
   </body>
 </html>
