@@ -16,14 +16,14 @@ import { openErrorModal, closeErrorModal } from "../../login/js/modal.js";
 //  비밀번호 입력/토글 요소 참조
 const passwordInput = document.querySelector("#password");
 const pwdToggleBtn = document.querySelector(
-  ".content-C .password-toggle-button"
+  ".password-input-box .password-toggle-button"
 );
 const pwdToggleIcon = pwdToggleBtn?.querySelector("img");
 
 //  비밀번호 확인 입력/토글 요소 참조
 const passwordConfirmInput = document.querySelector("#password-confirm");
 const confirmToggleBtn = document.querySelector(
-  ".content-D .password-toggle-button"
+  ".password-confirm-input-box .password-toggle-button"
 );
 const confirmToggleIcon = confirmToggleBtn?.querySelector("img");
 
@@ -31,12 +31,10 @@ const confirmToggleIcon = confirmToggleBtn?.querySelector("img");
 const form = document.querySelector(".signup-form");
 const emailInput = document.querySelector("#email");
 const nicknameInput = document.querySelector("#nickname");
-
 const emailError = document.querySelector("#email-error");
 const nicknameError = document.querySelector("#nickname-error");
 const passwordError = document.querySelector("#password-error");
 const passwordConfirmError = document.querySelector("#password-confirm-error");
-
 const signupBtn = document.querySelector(".signup-blt");
 
 //  비밀번호 토글 초기화 (비밀번호)

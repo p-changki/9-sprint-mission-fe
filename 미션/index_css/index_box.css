@@ -48,11 +48,7 @@ a {
 
 .description h1 {
   color: var(--Secondary-700, #374151);
-  font-family: Pretendard;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 56px */
+  /* 56px */
 }
 
 .blt-search span {
@@ -69,12 +65,7 @@ a {
 .search h2,
 .hot-item h2,
 .register-text h2 {
-  color: var(--Secondary-700, #374151);
-  font-family: Pretendard;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 56px */
+  color: var(--Secondary-700, #374151); /* 56px */
   letter-spacing: 0.05rem;
 }
 
@@ -98,7 +89,7 @@ a {
 .search-text h3,
 .register-text h3 {
   color: var(--Primary-100, #3692ff);
-  /* pretendard/2lg-18px-bold */
+
   font-family: Pretendard;
   font-size: 1.125rem;
   font-style: normal;
@@ -108,36 +99,37 @@ a {
 
 .illustration-text h2 {
   color: var(--Secondary-700, #374151);
-  text-align: right;
-  font-family: Pretendard;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 56px */
+  text-align: right; /* 56px */
   letter-spacing: 0.05rem;
 }
 
 .illustration-text h2 {
-  color: var(--Secondary-700, #374151);
-  font-family: Pretendard;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 56px */
+  color: var(--Secondary-700, #374151); /* 56px */
 }
 
 .center-wrapper p {
   color: var(--Secondary-400, #9ca3af);
-  text-align: center;
-  font-family: Pretendard;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 
 .center-wrap a {
   color: var(--Secondary-200, #e5e7eb);
+}
+
+.illustration-text h2,
+.illustration-text h2,
+.description h1,
+.search h2,
+.hot-item h2,
+.register-text h2 {
+  font-family: Pretendard;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.center-wrap a,
+.center-wrapper {
   text-align: center;
   font-family: Pretendard;
   font-size: 1rem;

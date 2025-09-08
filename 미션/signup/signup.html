@@ -15,81 +15,74 @@
           <img src="./panda_logimg/판다 얼굴.svg" alt="로고" />
           <h1 class="log-text">판다마켓</h1>
         </header>
-        <div class="main-content">
+        <div class="main-wrap">
           <form class="signup-form">
-            <div class="main-content">
-              <div class="content-A">
-                <label for="email">이메일</label>
-                <input
-                  type="email"
-                  id="email"
-                  class="email-input"
-                  placeholder="이메일을 입력하세요"
-                />
-                <small id="email-error" class="error-message"></small>
-              </div>
-              <div class="content-B">
-                <label for="nickname">닉네임</label>
-                <input
-                  type="text"
-                  id="nickname"
-                  class="nickname-input"
-                  placeholder="닉네임을 입력하세요"
-                />
-                <small id="nickname-error" class="error-message"></small>
-              </div>
-              <div class="content-C">
-                <label for="password">비밀번호</label>
-                <div class="input-wrapper">
-                  <input
-                    type="password"
-                    id="password"
-                    class="password-input"
-                    placeholder="비밀번호를 입력하세요"
-                  />
-                  <button
-                    type="button"
-                    class="password-toggle-button"
-                    aria-label="비밀번호 보기"
-                  >
-                    <img
-                      src="../assets/btn_visibility_off_24px.svg"
-                      alt="비밀번호 숨김 상태 아이콘"
-                    />
-                  </button>
-                </div>
-                <small id="password-error" class="error-message"></small>
-              </div>
-
-              <div class="content-D">
-                <label for="password-confirm">비밀번호 확인</label>
-                <div class="input-wrapper">
-                  <input
-                    type="password"
-                    id="password-confirm"
-                    placeholder="비밀번호를 다시 입력하세요"
-                    class="password-confirm-input"
-                  />
-                  <button
-                    type="button"
-                    class="password-toggle-button"
-                    aria-label="비밀번호 보기"
-                  >
-                    <img
-                      src="../assets/btn_visibility_off_24px.svg"
-                      alt="비밀번호 숨김 상태 아이콘"
-                    />
-                  </button>
-                </div>
-                <small
-                  id="password-confirm-error"
-                  class="error-message"
-                ></small>
-              </div>
+            <div class="email-input-box">
+              <label for="email">이메일</label>
+              <input
+                type="email"
+                id="email"
+                class="email-input"
+                placeholder="이메일을 입력하세요"
+              />
+              <small id="email-error" class="error-message"></small>
             </div>
-            <button type="submit" class="signup-blt">
-              <p>회원가입</p>
-            </button>
+            <div class="nickname-input-box">
+              <label for="nickname">닉네임</label>
+              <input
+                type="text"
+                id="nickname"
+                class="nickname-input"
+                placeholder="닉네임을 입력하세요"
+              />
+              <small id="nickname-error" class="error-message"></small>
+            </div>
+            <div class="password-input-box">
+              <label for="password">비밀번호</label>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  class="password-input"
+                  placeholder="비밀번호를 입력하세요"
+                />
+                <button
+                  type="button"
+                  class="password-toggle-button"
+                  aria-label="비밀번호 보기"
+                >
+                  <img
+                    src="../assets/btn_visibility_off_24px.svg"
+                    alt="비밀번호 숨김 상태 아이콘"
+                  />
+                </button>
+              </div>
+              <small id="password-error" class="error-message"></small>
+            </div>
+            <div class="password-confirm-input-box">
+              <label for="password-confirm">비밀번호 확인</label>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  id="password-confirm"
+                  placeholder="비밀번호를 다시 입력하세요"
+                  class="password-confirm-input"
+                />
+                <button
+                  type="button"
+                  class="password-toggle-button"
+                  aria-label="비밀번호 보기"
+                >
+                  <img
+                    src="../assets/btn_visibility_off_24px.svg"
+                    alt="비밀번호 숨김 상태 아이콘"
+                  />
+                </button>
+              </div>
+              <small id="password-confirm-error" class="error-message"></small>
+            </div>
+
+            <button type="submit" class="signup-blt">회원가입</button>
           </form>
           <section class="loginbtn">
             <div class="btn-content">
@@ -104,10 +97,10 @@
               </div>
             </div>
           </section>
-          <div class="footer-text">
+          <footer>
             <p>이미 회원이신가요?</p>
             <a href="../login/login.html">로그인</a>
-          </div>
+          </footer>
         </div>
       </div>
     </div>

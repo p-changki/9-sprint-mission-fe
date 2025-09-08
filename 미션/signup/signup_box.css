@@ -32,7 +32,7 @@
   line-height: normal;
 }
 
-.signup-blt p {
+.signup-blt {
   color: #fff;
   text-align: center;
   font-family: Pretendard;
@@ -52,7 +52,7 @@
   line-height: 1.625rem; /* 162.5% */
 }
 
-.footer-text p {
+footer p {
   color: var(--Cool-Gray-800, #1f2937);
   /* pretendard/md-14px-medium */
   font-family: Pretendard;
@@ -62,7 +62,7 @@
   line-height: 1.5rem; /* 171.429% */
 }
 
-.footer-text a {
+footer a {
   color: var(--Brand-blue, #3182f6);
   font-family: Pretendard;
   font-size: 0.9375rem;

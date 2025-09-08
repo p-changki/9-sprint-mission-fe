@@ -21,12 +21,6 @@ html {
   align-items: center;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
 .page {
   display: flex;
   flex-direction: column;
@@ -64,13 +58,13 @@ button {
   gap: 24px;
 }
 
-.main-content {
+.main-wrap {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.main-content input {
+.main-wrap input {
   width: 640px;
   height: 56px;
   padding: 16px 24px;
@@ -82,26 +76,19 @@ button {
   display: block;
 }
 
-.content-A,
-.content-B,
-.content-C,
-.content-D {
+.email-input-box,
+.nickname-input-box,
+.password-input-box,
+.password-confirm-input-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
 }
 
-.content-C,
-.content-D {
+.password-input-box,
+.password-confirm-input-box {
   position: relative;
-}
-
-.inpit-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
 }
 
 .visibility-icon {
@@ -133,11 +120,8 @@ button {
 }
 
 .visibility-icon {
-  display: flex;
   width: 24px;
   height: 24px;
-  justify-content: center;
-  align-items: center;
 }
 
 .loginbtn {
@@ -165,7 +149,7 @@ button {
   gap: 16px;
 }
 
-.footer-text {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
